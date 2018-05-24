@@ -1,0 +1,53 @@
+/* pages/record/record.wxss */
+.useinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.useinfo-title {
+  font-size: 46rpx;
+  padding-bottom: 60rpx;
+  font-style: bold;
+  
+}
+
+.useinfo-readme {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.current_container {
+
+  width: 80 px; 
+  height: 80 px; 
+  border: 1px solid;
+  padding: 2px 5px;
+  margin-top: 15px;
+}
+
+.current_word {
+  align-content: center;
+  width: 80 px;
+  height: 20 px;
+    font-size: 48rpx;
+}
+
+.btn-control {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px
+}
+
+.btn-start {
+  margin-top: 10rpx;
+  width: 400rpx;
+}
+.btn-stop {
+  margin-top: 10rpx;
+  width: 400rpx;
+}
+.btn-record {
+
+  margin-top: 10rpx;
+  width: 400rpx;
+}

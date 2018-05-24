@@ -1,0 +1,14 @@
+<!--pages/record/record.wxml-->
+<view class="container">
+  <view class="useinfo">
+  <text class="useinfo-title">开放语音录制器</text>
+  <text class="useinfo-readme">开始后，请立即读出显示的单词\n剩余:{{last_words_cnt}}</text>
+  </view>
+  <view class='current_container'>  <text class='current_word'>{{current_word}}</text></view>
+
+  <view class="btn-control">
+    <!--<button class="btn-start" bindtap="startRecord" style='display: {{btn_start_enable}}; background-color: #1AAD19;color: #FFFFFF;' >开始录音</button>-->
+    <!--<button class="btn-stop" bindtap="stopRecord" style='display: {{btn_stop_enable}}; background-color: #ff5027;color: #FFFFFF;' >结束录音</button>-->
+    <button class="btn-record" bindtouchstart="touchstart" bindtouchend='touchend' style=' background-color: #1AAD19;color: #FFFFFF;'>{{btn_touch_text}}</button>
+  </view>
+</view>
