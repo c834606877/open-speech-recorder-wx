@@ -2,13 +2,25 @@
 <view class="container">
   <view class="useinfo">
   <text class="useinfo-title">开放语音录制器</text>
-  <text class="useinfo-readme">开始后，请立即读出显示的单词\n剩余:{{last_words_cnt}}</text>
+  <text class="useinfo-readme">录音时，请对准麦克风，保持周围环境安静。\n开始后，请立即大声读出显示的单词。\n剩余:{{last_words_cnt}}</text>
   </view>
-  <view class='current_container'>  <text class='current_word'>{{current_word}}</text></view>
+  <view class='current_container'><text>{{current_word_tip}}</text>  <text class='current_word'>{{current_word}}</text></view>
+
+
+<button wx:if="{{btn_reset_enable}}"  class="btn-reset" bindtap="ResetRecord" style='background-color: #ff5027;color: #FFFFFF; margin: 50rpx;' >再次录制</button>
+
+<button wx:if="{{btn_reset_enable}}"  class="btn-reset" bindtap="CencelRecord" style='background-color: #44b549;color: #FFFFFF;' >完成录制</button>
+
+
 
   <view class="btn-control">
     <!--<button class="btn-start" bindtap="startRecord" style='display: {{btn_start_enable}}; background-color: #1AAD19;color: #FFFFFF;' >开始录音</button>-->
     <!--<button class="btn-stop" bindtap="stopRecord" style='display: {{btn_stop_enable}}; background-color: #ff5027;color: #FFFFFF;' >结束录音</button>-->
-    <button class="btn-record" bindtouchstart="touchstart" bindtouchend='touchend' style=' background-color: #1AAD19;color: #FFFFFF;'>{{btn_touch_text}}</button>
+
+<view class='recording-view'>
+        <text  wx:if="{{btn_reset_enable == false}}" class='record-time'>{{record_time_text}}</text>
+    </view>
+
+    <button wx:if="{{btn_reset_enable == false}}" class="btn-record {{btn_record_class}}" bindtouchstart="touchstart" bindtouchend='touchend' >按住录音</button>
   </view>
 </view>

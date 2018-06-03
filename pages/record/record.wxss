@@ -33,9 +33,11 @@
 }
 
 .btn-control {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px
+    position: fixed;
+    bottom: 190rpx;
+    left: 0;
+    height: 190rpx;
+    width: 100%;
 }
 
 .btn-start {
@@ -47,7 +49,39 @@
   width: 400rpx;
 }
 .btn-record {
-
+  font-size: 36rpx;
+  border-radius:110rpx;
+  
+  color: #FFFFFF;
   margin-top: 10rpx;
-  width: 400rpx;
+  line-height:220rpx;
+  width: 220rpx;
+  height: 220rpx;
+}
+.btn-record-untouched {
+    background-color: #44b549;
+}
+
+.btn-record-touched {
+  background-color: #2F9833;
+}
+
+
+
+.recording-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.record-time {
+  width: 100%;
+  text-align: center;
+  padding:  0 0 35rpx 0;
+
+}
+
+.btn-reset {
+  width: 60%;
+  
 }
